@@ -1,0 +1,16 @@
+MJ
+Aspiring AI/ML Engineer
+
+Skills:
+Python, FastAPI, React, MongoDB, Docker, Git, GitHub,
+Machine Learning, Deep Learning, TensorFlow, PyTorch,
+Scikit-learn, Computer Vision, OpenCV.
+
+Projects:
+Developed a deepfake video detection project using computer vision.
+Built a radiation forecasting system using machine learning and satellite data.
+Created a React and FastAPI full-stack application with MongoDB.
+
+Experience:
+AI/ML engineering student and software developer.
+

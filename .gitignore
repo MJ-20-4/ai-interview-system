@@ -1,0 +1,34 @@
+# Environment secrets
+.env
+**/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+backend/venv/
+*.egg-info/
+
+# Python test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# JavaScript
+frontend/node_modules/
+frontend/dist/
+
+# Local databases and vector data
+chroma_data/
+backend/chroma_data/
+uploads/
+backend/uploads/
+backend/generated_reports/
+
+# Logs
+*.log
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/

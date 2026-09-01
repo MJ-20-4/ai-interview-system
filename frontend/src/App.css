@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  background: #f3f6fc;
+  color: #172033;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background: #2563eb;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px;
+}
+
+.card {
+  width: min(760px, 100%);
+  padding: 40px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 16px 50px rgba(15, 23, 42, 0.12);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.description {
+  max-width: 650px;
+  line-height: 1.6;
+  color: #52607a;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.next-steps {
+  margin-top: 32px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.next-steps h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.next-steps li {
+  margin: 8px 0;
+}
