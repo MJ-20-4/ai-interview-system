@@ -1,10 +1,10 @@
-from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status
+from fastapi import APIRouter, File, Form, HTTPException, UploadFile, status, Query
 
 from app.models.schemas import CreateSessionResponse
 from app.repositories.session_repository import create_session
 from app.services.resume_analyzer import analyze_resume
 from app.services.resume_parser import extract_resume_text
-
+from app.services.rag_service import retrieve_context
 
 router = APIRouter(
     prefix="/api/sessions",
@@ -95,3 +95,34 @@ async def create_interview_session(
         "candidate_profile": candidate_profile,
         "message": "Resume processed and interview session created successfully."
     }
+@router.get("/rag-test")
+async def test_rag_retrieval(
+    role: str = Query(...),
+    skills: str = Query(""),
+    projects: str = Query(""),
+    topic: str | None = Query(None),
+):
+    skill_list = [
+        item.strip()
+        for item in skills.split(",")
+        if item.strip()
+    ]
+
+    project_list = [
+        item.strip()
+        for item in projects.split("|")
+        if item.strip()
+    ]
+
+    try:
+        return retrieve_context(
+            role=role,
+            skills=skill_list,
+            projects=project_list,
+            topic_hint=topic,
+        )
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=f"RAG retrieval failed: {str(error)}"
+        )
