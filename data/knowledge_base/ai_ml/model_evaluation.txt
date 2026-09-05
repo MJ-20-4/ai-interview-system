@@ -1,0 +1,29 @@
+Model Evaluation in Machine Learning
+
+Model evaluation determines whether a machine learning system generalizes well
+to unseen examples. Accuracy is the proportion of correct predictions over all
+predictions. Accuracy can be misleading when the dataset is imbalanced, because
+a model can predict the majority class for every example and still obtain a high
+accuracy score.
+
+A confusion matrix summarizes classification results using true positives, true
+negatives, false positives, and false negatives. Precision is the proportion of
+predicted positive examples that are actually positive. Recall is the proportion
+of actual positive examples that the model correctly identifies. The F1 score
+combines precision and recall using their harmonic mean.
+
+For imbalanced classification tasks, precision, recall, F1 score, ROC-AUC, and
+PR-AUC are often more informative than accuracy. The best metric depends on the
+cost of false positives and false negatives.
+
+Training data is used to fit model parameters. Validation data is used to select
+hyperparameters and compare candidate models. Test data should be used only for
+the final unbiased performance estimate. Data leakage occurs when information
+from validation or test data influences model training or feature engineering.
+Leakage can produce unrealistically strong evaluation results but poor
+performance after deployment.
+
+Cross-validation evaluates a model across multiple train-validation splits.
+K-fold cross-validation divides the dataset into K sections. The model trains
+on K minus one sections and validates on the remaining section, repeating this
+process until each section has been used as validation data.

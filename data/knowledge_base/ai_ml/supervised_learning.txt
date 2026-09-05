@@ -1,0 +1,25 @@
+Supervised Learning
+
+Supervised learning trains a model using input-output pairs. Input features
+represent measurable information and the target represents the expected output.
+Classification predicts a category, such as whether a video is manipulated or
+authentic. Regression predicts a continuous value, such as a forecasted
+radiation measurement.
+
+Overfitting occurs when a model learns details and noise specific to the
+training data rather than patterns that generalize to new data. An overfit model
+can have high training performance and weak validation performance. Common ways
+to reduce overfitting include collecting representative data, regularization,
+simplifying the model, data augmentation, dropout, early stopping, and proper
+cross-validation.
+
+Underfitting occurs when a model is too simple to learn the underlying pattern.
+It often produces poor performance on both training and validation data. The
+bias-variance tradeoff describes the balance between errors caused by overly
+simple assumptions and errors caused by sensitivity to the training dataset.
+
+Feature engineering transforms raw data into useful model inputs. Features
+should be selected using domain knowledge and evaluated carefully to avoid data
+leakage. Feature scaling is often important for distance-based and
+gradient-based models.
+

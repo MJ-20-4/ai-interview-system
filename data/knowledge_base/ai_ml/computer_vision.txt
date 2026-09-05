@@ -1,0 +1,25 @@
+Computer Vision and Deep Learning
+
+Computer vision systems use algorithms to interpret images and videos. A common
+pipeline includes data collection, labeling, preprocessing, model training,
+evaluation, and deployment monitoring. Image preprocessing can include resizing,
+normalization, cropping, and data augmentation.
+
+Convolutional neural networks use convolutional layers to learn local spatial
+patterns such as edges, textures, shapes, and higher-level visual features.
+Pooling layers reduce spatial dimensions while retaining important signals.
+Modern vision systems may use transfer learning by starting with a neural
+network pretrained on a large dataset and fine-tuning it on the target task.
+
+A deepfake detection system is commonly formulated as a binary classification
+problem: manipulated versus authentic content. Important practical challenges
+include class imbalance, distribution shift across datasets, compression
+artifacts, changing manipulation methods, and unreliable real-world video
+quality. A model should be evaluated on separate datasets when possible to
+measure generalization.
+
+For video tasks, temporal information may be important. A system can process
+individual frames, aggregate frame-level predictions, or use sequence models to
+capture changes across time. Deployment requires monitoring model confidence,
+data drift, latency, privacy concerns, and false-positive or false-negative
+costs.
