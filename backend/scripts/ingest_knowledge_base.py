@@ -44,7 +44,18 @@ def chunk_text(text: str, chunk_size: int = 120, overlap: int = 30) -> list[str]
 
 
 def role_from_path(file_path: Path) -> str:
-    return file_path.parent.name.replace("_", " ").upper()
+    folder_name = file_path.parent.name.lower()
+
+    role_mapping = {
+        "ai_ml": "AI/ML ENGINEER",
+        "backend": "BACKEND ENGINEER",
+        "data_science": "DATA SCIENTIST",
+    }
+
+    return role_mapping.get(
+        folder_name,
+        folder_name.replace("_", " ").upper()
+    )
 
 
 def load_chunks() -> tuple[list[str], list[dict], list[str]]:
